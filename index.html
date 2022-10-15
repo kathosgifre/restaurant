@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="css/estilos.css">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    
+        <!-- Click Right Off-->
+    <script type="text/javascript">
+      document.oncontextmenu = function(){
+        return false;
+      }
+      function right(e){
+    var msg = "You can't do this, sorry!";
+    if (navigator.appName == 'Netscape' && e.which == 3){
+        alert(msg);
+    }
+    else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {
+      alert(msg);
+
+    return false;
+    }
+  return true;
+}
+document.onmousedown = right;
+    </script>
+
 </head>
 <body>
     <header class="header" id="inicio">
